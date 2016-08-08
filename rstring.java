@@ -8,28 +8,28 @@ public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     System.out.println("Enter the string");
-    String s = br.readLine();
+    String s1 = br.readLine();
 
-    String rev = StringRev(s);
+    String rev = StringRev(s1);
 
     System.out.println(rev);
 
 }
 
-private static String StringRev(String s) 
+private static String StringRev(String s1) 
 {
 
-    char[] modString = new char[s.length()];
+    char[] modString = new char[s1.length()];
 
-    for (int i = 0; i < s.length(); i++) 
+    for (int i = 0; i < s1.length(); i++) 
     {
-        modString[i] = s.charAt(s.length() - 1 - i);
+        modString[i] = s1.charAt(s1.length() - 1 - i);
     }
 
-    s = s.copyValueOf(modString);
+    s = s1.copyValueOf(modString);
     String reverseWord = "";
     String eachWord;
-    for (String part : s.split(" ")) 
+    for (String part : s1.split(" ")) 
     {
         eachWord = new StringBuilder(part).reverse().toString();
         reverseWord = reverseWord + eachWord + " ";
